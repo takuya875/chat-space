@@ -1,0 +1,29 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__current-group
+        tech expert
+      .main-header__left-box__member-list
+        Member : takuya
+    .main-header__side-menu
+      = link_to "#", class: "main-header__side-menu__edit-btn" do
+        Edit
+
+  .message
+    .message__box
+      .message__box__upper__info
+        .message__box__upper__info__name
+          takuya
+        .message__box__upper__info__date
+          2019/11/17
+      .message__box__text
+        こん
+
+  .form
+    .new_message
+      %input.input-box__text{placeholder: :"type a message",type: :"text",name: :"message[content]",id: :message_content}
+      .icon
+        %label.input-box__image__file
+          = icon('fas', 'image', class: "icon")
+          %input.hidden{type: :"file",name: :"message[image]",id: :"message_image"}
+      %input.input-submit__btn{type: :submit,name: :"commit", value: :"Send"}
