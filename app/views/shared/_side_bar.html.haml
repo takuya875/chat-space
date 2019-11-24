@@ -3,11 +3,11 @@
   .side-header
     .side-header__box
       .side-header__box__user-name
-        takuya
+        = current_user.name
       .side-header__box__menu
         =link_to "#", class: "side-header__box__menu__new-group__btn" do
           = icon('fas', 'edit')
-        =link_to "#", class: "side-header__box__menu__edit-user__btn" do
+        =link_to edit_user_path(current_user), class: "side-header__box__menu__edit-user__btn" do
           = icon('fas', 'cog')
   .groups
     .group
@@ -17,4 +17,3 @@
         まだメッセージがありません
 
 
-  
