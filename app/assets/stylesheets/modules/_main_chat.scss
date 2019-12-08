@@ -38,34 +38,33 @@
       } 
   }
 
-  .message{
+  .messages{
     height: calc(100vh - 190px);
-    padding: 46px 40px;
+    padding: 20px 20px;
     background-color: #fafafa;
     overflow: scroll;
     box-sizing: border-box;
-    &__box{
-      padding-bottom: 40px;
-      &__upper__info{
+    .message{
+      padding: 20px 20px;
+      &__box{
+        padding-bottom: 5px;
         display: flex;
-        margin-bottom: 10px;
-        &__name{
-          color: #434a54;
-          font-size: 16px;
-          font-weight: bold;
-        }
-        &__date{
-          color: #999999;
-          font-size: 12px;
-          margin-left: 10px;
-        }
-      &__text{
-        color: #434a54;
-        font-size: 14px;
-        margin-bottom: 10px;
-        }
-
+          &__user-name{
+            color: #434a54;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__date{
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
       }
+      &__text{
+          color: #434a54;
+          font-size: 14px;
+          margin-bottom: 10px;
+          }
     }
   }
 
@@ -74,27 +73,30 @@
     padding: 20px 40px;
     background-color: #ddd;
     box-sizing: border-box;
-    // paddingの要素を
-    .new_message{
-      display: flex;
+    .input-box{
+      position: relative;
+      width: 100%;
       .input-box__text{
         height: 50px;
         width: 100%;
-        padding: 0 40px 0 10px;
         color: #434a54;
         border-style: none;
       }
-      .icon{
-        position:relative;
-        .input-box__image__file{
+      ::placeholder {
+        padding-left: 10px;
+      }
+      .input-box__image{
+        position: absolute;
+        .image-icon{
           font-size: 1.3rem;
           position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
+          top:20px;
+          right:20px;
+          color: black;
         }
       }
-      .input-submit__btn{
+    }
+      .submit__btn{
         width: 100px;
         height: 50px;
         padding: 0 30px;
@@ -104,9 +106,12 @@
         cursor: pointer;
       }
     }
-  }
 }
 
 .hidden{
   display:none;
+}
+
+.new_message{
+  display: flex;
 }
