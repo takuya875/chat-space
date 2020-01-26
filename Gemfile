@@ -63,6 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
  gem 'devise'
  
  gem 'carrierwave'
+ gem 'fog-aws'
  gem 'mini_magick'
 
  gem 'jquery-rails'
@@ -78,3 +79,4 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
 end
+
